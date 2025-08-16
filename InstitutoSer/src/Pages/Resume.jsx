@@ -1,4 +1,4 @@
-import resumePdf from "../../../Pdf/Resume.pdf";
+//import resumePdf from "../../../Pdf/Resume.pdf";
 export default function Resume() {
   return (
     <main className="container">

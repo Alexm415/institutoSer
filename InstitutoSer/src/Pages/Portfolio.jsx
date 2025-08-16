@@ -25,8 +25,11 @@ export default function Portfolio() {
             </div>
           </div>
         ))}
-
-        <div className="row mb-2">
+      </div>
+    </div>
+  );
+}
+/* <div className="row mb-2">
           {data.otherAssignments.map((otherAssignments) => (
             <div className="col-md-6 containercard" key={otherAssignments.id}>
               <img
@@ -47,12 +50,4 @@ export default function Portfolio() {
                       Continue reading
                     </a>
                   </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+                  */

@@ -1,23 +1,12 @@
-import img4 from "../assets/images/logo.png";
-const styles = {
-  head: {
-    backgroundImage: `url(${img4})`,
-    justifyContent: "center",
-
-    height: 150,
-  },
-  text: {
-    justifyContent: "center",
-    display: "flex",
-  },
-};
-
+import logo from "../assets/images/Wlogo.jpeg";
 function Head() {
   return (
-    <header style={styles.head} className="border-bottom  lh-1 py-2">
-      <div style={styles.text} className=" center">
-        <h1 className="display-4 fw-normal text-body-emphasis">Welcome</h1>
-      </div>
+    <header>
+      <img
+        src={logo} // Replace with your actual logo path (import if needed)
+        alt="IDEHA Logo"
+        className="logo spinning-logo" // Applies sizing and spin animation
+      />
     </header>
   );
 }

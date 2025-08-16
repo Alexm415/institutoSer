@@ -1,16 +1,17 @@
-import Me from "../../../images/me.png";
+import Grp from "../assets/images/Grupo.jpeg";
+import event from "../assets/images/event.jpeg";
+
 import { Link } from "react-router-dom";
 
 const styles = {
   pic: {
-    width: 500,
-    height: 400,
-    borderRadius: 175,
+    width: 1000,
+    height: 462,
   },
-  profileImg: {
-    height: 300,
-    width: 300,
-    borderRadius: 150,
+  eventpic: {
+    height: 500,
+    width: 500,
+
     margin: "20px", // Add some space between the image and the text
   },
   flexContainer: {
@@ -25,40 +26,65 @@ const styles = {
     textoverflow: "ellipsis",
   },
 };
+styles.flexContainer = {
+  display: "flex",
+  alignItems: "center",
+  flexWrap: "wrap", // lets them stack on small screens
+};
 
 function Body() {
   return (
-    <main className="container">
-      <div className="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-        <div className="row featurette">
-          <div className="col-md-7 order-md-2">
-            <h1 className="featurette-heading fst-italic">
-              Hello My Name is Alexander
-            </h1>
-            <p className="lead">
-              I am a full stack developer, from San Francisco. 😎
-            </p>
-            <p className="lead mb-0">
-              <Link
-                href="/aboutme"
-                to="/aboutme"
-                className="text-body-emphasis fw-bold"
-              >
-                Continue reading about me...
-              </Link>
-            </p>
-          </div>
-          <div className="col-md-5 order-md-1">
-            <img
-              className="featurette-image img-fluid mx-auto"
-              style={styles.pic}
-              src={Me}
-              data-holder-rendered="true"
-            />
+    <div>
+      <main className="body">
+        <div className="hero">
+          <div className="row featurette">
+            <div className="w3-container w3-padding-32">
+              <h1>Un Poco de nos</h1>
+              <div>
+                <p>
+                  En Instituto SER, una idea que nació de la pasión por el
+                  crecimiento humano se ha convertido en un espacio donde
+                  personas de todas las edades y contextos rediseñan la forma en
+                  que viven, se relacionan y toman decisiones. Más que un centro
+                  de entrenamiento, somos una comunidad que se expande cada día
+                  con quienes eligen transformar su vida y aportar al mundo
+                  desde una nueva versión de sí mismos.
+                </p>
+                <p className="">
+                  En Instituto SER transformamos vidas a través de
+                  entrenamientos vivenciales que te llevan a descubrir y superar
+                  tus propios límites. En un ambiente seguro y retador,
+                  aprenderás a liberar patrones que frenan tu potencial, ganar
+                  confianza, fortalecer tus relaciones y crear resultados
+                  extraordinarios en las áreas más importantes de tu vida.
+                </p>
+              </div>
+            </div>
+            <section>
+              <img
+                style={styles.pic}
+                src={Grp} // Replace with your actual file path (e.g., import logo from './assets/logo-similar.png'; then src={logo})
+                alt="Grp"
+                className="" // Add 'spinning-logo' to enable the animation
+              />
+            </section>
+            <section className="events">
+              <div className="event-card">
+                <h2>Nuestros próximos eventos</h2>
+                <img style={styles.eventpic} src={event} alt="Event" />
+              </div>
+              {/* Add more event cards as needed */}
+            </section>
+            <section className="contact">
+              <h2>Contactanos</h2>
+              <p>A</p>
+              <p>Dirección General: </p>
+              <p>Administración: </p>
+            </section>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
 export default Body;
