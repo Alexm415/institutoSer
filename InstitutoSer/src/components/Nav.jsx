@@ -14,7 +14,7 @@ function Nav() {
         <Link
           className="w3-bar-item w3-button"
           href="/portfolio"
-          to="/portfolio"
+          to="/Comunidad"
         >
           Comunidad
         </Link>

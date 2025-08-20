@@ -5,21 +5,20 @@ import img4 from "../src/assets/images/V23.jpeg";
 const projects = [
   {
     id: 0,
-    title: "Vibez Music App",
+    title: "V23",
     image: img4,
-    date: "Jan 30th 2025",
+    date: "July 2024",
     content:
-      "This group project we learned the power of the mongo data base. We also learned how to implemnt react in our project, how to get data from the data base in real time and pull data back so the user can see there saved songs.",
-    link: "https://github.com/Alexm415/vibez-tune-music-app",
+      "Este proyecto grupal lo devolvimos a las personas mayores de la comunidad de San Rafael.",
+    link: "",
   },
   {
     id: 1,
-    title: "News Hub",
+    title: "ID 4",
     image: img0,
-    date: "Nov 25th 2024",
-    content:
-      "This group project we worked on for about 2 weeks and learned so much from it. There were problems, that we all over came and made a great news app!",
-    link: "https://github.com/Alexm415/NewsHub",
+    date: "Aug. 2025",
+    content: "",
+    link: "",
   },
 ];
 /* {

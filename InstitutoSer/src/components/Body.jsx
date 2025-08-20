@@ -1,6 +1,5 @@
 import Grp from "../assets/images/Grupo.jpeg";
-import event from "../assets/images/event.jpeg";
-
+import event from "../assets/images/event.jpg";
 import { Link } from "react-router-dom";
 
 const styles = {
@@ -11,30 +10,48 @@ const styles = {
   eventpic: {
     height: 500,
     width: 500,
-
     margin: "20px", // Add some space between the image and the text
   },
   flexContainer: {
     display: "flex",
     alignItems: "center", // Align items vertically centered
+    flexWrap: "wrap", // lets them stack on small screens
   },
   title: {
     marginLeft: "100px",
     padding: 50,
     whitespace: "nowrap",
-
     textoverflow: "ellipsis",
   },
-};
-styles.flexContainer = {
-  display: "flex",
-  alignItems: "center",
-  flexWrap: "wrap", // lets them stack on small screens
 };
 
 function Body() {
   return (
     <div>
+      {/* 📱 Mobile-specific overrides */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            img[alt="Grp"] {
+              width: 100% !important;
+              height: auto !important;
+            }
+            img[alt="Event"] {
+              width: 100% !important;
+              max-width: 100% !important;
+              height: auto !important;
+            }
+            .row.featurette {
+              flex-direction: column !important;
+              text-align: center;
+            }
+            .w3-container {
+              padding: 16px !important;
+            }
+          }
+        `}
+      </style>
+
       <main className="body">
         <div className="hero">
           <div className="row featurette">
@@ -60,14 +77,11 @@ function Body() {
                 </p>
               </div>
             </div>
+
             <section>
-              <img
-                style={styles.pic}
-                src={Grp} // Replace with your actual file path (e.g., import logo from './assets/logo-similar.png'; then src={logo})
-                alt="Grp"
-                className="" // Add 'spinning-logo' to enable the animation
-              />
+              <img style={styles.pic} src={Grp} alt="Grp" className="" />
             </section>
+
             <section className="events">
               <div className="event-card">
                 <h2>Nuestros próximos eventos</h2>
@@ -75,11 +89,16 @@ function Body() {
               </div>
               {/* Add more event cards as needed */}
             </section>
+
             <section className="contact">
               <h2>Contactanos</h2>
-              <p>A</p>
-              <p>Dirección General: </p>
-              <p>Administración: </p>
+              <h3>Nuestro correo electrónico es</h3>
+              <p>info@institutoserinc.com</p>
+              <h3>Direction</h3>
+              <p>
+                3830 Pacheco Blvd., Suite C Martinez, CA, United States,
+                California 94553
+              </p>
             </section>
           </div>
         </div>
@@ -87,6 +106,7 @@ function Body() {
     </div>
   );
 }
+
 export default Body;
 
 /*import Me from "../../../images/me.jpeg";

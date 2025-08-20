@@ -11,8 +11,10 @@ body {
   color: #333;
   line-height: 1.6;
 }
+h3 {
+  color: #100977;
+}
 
-/* Header and Logo */
 header {
   background-color: #ffffff;
   padding: 1.5rem 2rem;

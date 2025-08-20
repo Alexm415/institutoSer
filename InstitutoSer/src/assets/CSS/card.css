@@ -1,7 +1,14 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
+  justify-content: space-between; /* Distributes space evenly between cards */
+}
+
 .containercard {
   position: relative;
-  width: 50%;
+  width: 50%; /* Keeps two cards per row; adjust to e.g., 33% for three, or use flex-basis for more flexibility */
   padding: 30px;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
 }
 
 .image {

@@ -1,10 +1,10 @@
 import data from "../data";
-export default function Portfolio() {
+export default function Comunidad() {
   console.log(data);
   console.log(Array.isArray(data));
   return (
     <div>
-      <div className="row mb-2">
+      <div className="cards">
         {data.projects.map((projects) => (
           <div className="col-md-6 containercard" key={projects.id}>
             <img src={projects.image} alt="Avatar" className="image" />
@@ -14,12 +14,6 @@ export default function Portfolio() {
                   <h3 className="mb-0">{`${projects.title}`}</h3>
                   <div className="mb-1 text-body-secondary">{`${projects.date}`}</div>
                   <p className="card-text mb-auto">{`${projects.content}`}</p>
-                  <a
-                    href={`${projects.link}`}
-                    className="icon-link gap-1 icon-link-hover stretched-link"
-                  >
-                    Continue reading
-                  </a>
                 </div>
               </div>
             </div>

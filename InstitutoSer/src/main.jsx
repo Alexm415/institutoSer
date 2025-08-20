@@ -1,8 +1,8 @@
 import App from "./App.jsx";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Aboutme from "./Pages/Aboutme.jsx";
-import Portfolio from "./Pages/Portfolio.jsx";
+import Masdenos from "./Pages/Masdenos.jsx";
+import Comunidad from "./Pages/Comunidad.jsx";
 import Resume from "./Pages/Resume.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Home from "./Pages/Home.jsx";
@@ -19,15 +19,15 @@ const router = createBrowserRouter([
       },
       {
         path: "Masdenos",
-        element: <Aboutme />,
+        element: <Masdenos />,
       },
       {
         path: "resume",
         element: <Resume />,
       },
       {
-        path: "portfolio",
-        element: <Portfolio />,
+        path: "Comunidad",
+        element: <Comunidad />,
       },
       {
         path: "contact",
