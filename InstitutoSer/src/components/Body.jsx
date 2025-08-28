@@ -93,12 +93,27 @@ function Body() {
             <section className="contact">
               <h2>Contactanos</h2>
               <h3>Nuestro correo electrónico es</h3>
-              <p>info@institutoserinc.com</p>
+              <a href="mailto:info@institutoserinc.com">
+                info@institutoserinc.com
+              </a>
               <h3>Direction</h3>
-              <p>
+              <a
+                href="https://maps.app.goo.gl/YdScaDwzbCG2vgwKA"
+                rel="noreferrer"
+              >
                 3830 Pacheco Blvd., Suite C Martinez, CA, United States,
                 California 94553
-              </p>
+              </a>
+            </section>
+            <section className="contact">
+              <h2>Directora General</h2>
+              <h3>Claudia Avalos</h3>
+              <a href="tel:+14082066337">(408) 206-6337</a>
+            </section>
+            <section className="contact">
+              <h2>Directora de Marketing</h2>
+              <h3>Johanna Penuela</h3>
+              <a href="tel:+19257050461">(925)705-0461</a>
             </section>
           </div>
         </div>
